@@ -1,65 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cn">
+
 <head>
     <meta charset="UTF-8">
-    <title>Hello World</title>
-    <link rel="stylesheet" href="css/css.css">
-    <style>
-		<!--.aa{-->
-			<!--width:1000px;-->
-			<!--height:110px;-->
-			<!--background-color:red-->
-		<!--}-->
+    <title>Document</title>
+    <style type="text/css">
+    .loader {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        padding: 0px;
+        opacity: 0.5;
+        border: 3px solid #09acfd;
+        -webkit-animation: loader 1s ease-in-out infinite alternate;
+        animation: loader 1s ease-in-out infinite alternate;
+    }
 
+    .loader:before {
+        content: " ";
+        position: absolute;
+        z-index: -1;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border: 3px solid #09acfd;
+    }
 
+    .loader:after {
+        content: " ";
+        position: absolute;
+        z-index: -1;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        border: 3px solid #09acfd;
+    }
 
+    @keyframes loader {
+        from {
+            transform: rotate(0deg) scale(1, 1);
+            border-radius: 0px;
+        }
+        to {
+            transform: rotate(360deg) scale(0, 0);
+            border-radius: 50px;
+        }
+    }
+
+    @-webkit-keyframes loader {
+        from {
+            -webkit-transform: rotate(0deg) scale(1, 1);
+            border-radius: 0px;
+        }
+        to {
+            -webkit-transform: rotate(360deg) scale(0, 0);
+            border-radius: 50px;
+        }
+    }
     </style>
 </head>
-<body>
-<h1 width="800px" height="200px" align="center">NCIIC查询结果</h1>
-<table border="1" width="800px" height="200px" align="center" cellspacing="0" cellpadding="10">
-    <tr bgcolor="E1E6F6" align="center">
-        <td width="200px">数据项</td>
-        <td width="200px">核查结果</td>
-        <td width="200px">输入信息</td>
-        <td width="200px">核查信息</td>
-    <tr align="center">
-        <td bgcolor="E1E6F6">公民身份证号码</td>
-        <td>一致</td>
-        <td>142323232323252546</td>
-        <td></td>
-    </tr>
-    <tr align="center">
-        <td bgcolor="E1E6F6">姓名</td>
-        <td>一致</td>
-        <td>陈志远</td>
-        <td></td>
-    </tr>
-    <tr align="center">
-        <td bgcolor="E1E6F6">相册</td>
-        <td></td>
-        <td></td>
-        <td><img alt/title="美图"src="file:///storage/emulated/0/code/a.png" width="200dp" /></td>
-    </tr>
 
-</table>
-<div class="aa">
-    vivo
-    X9s的外观给我留下了良好的印象，超窄边框和U型天线带来了更好的一体感，细腻的金属喷砂和大弧度的R角带来很好的握持手感。强悍的配置也带来了强悍的自拍效果，X9s拥有前置背景虚化、自动HDR、自动柔光灯等功能。实测结果也证明了vivo
-    X9s 的自拍人物背景虚化自然，美颜算法的确能把人拍的更美而不失真实美感。在自拍方面vivo X9s
-    无疑能给你带来惊喜，而后置相机表现同样也可圈可点，白天解析力充足，曝光准确，夜晚噪点控制出色，细节丰富。
-    vivo
-    X9s的外观给我留下了良好的印象，超窄边框和U型天线带来了更好的一体感，细腻的金属喷砂和大弧度的R角带来很好的握持手感。强悍的配置也带来了强悍的自拍效果，X9s拥有前置背景虚化、自动HDR、自动柔光灯等功能。实测结果也证明了vivo
-    X9s 的自拍人物背景虚化自然，美颜算法的确能把人拍的更美而不失真实美感。在自拍方面vivo X9s
-    无疑能给你带来惊喜，而后置相机表现同样也可圈可点，白天解析力充足，曝光准确，夜晚噪点控制出色，细节丰富。
-    vivo
-    vivo
-    X9s的外观给我留下了良好的印象，超窄边框和U型天线带来了更好的一体感，细腻的金属喷砂和大弧度的R角带来很好的握持手感。强悍的配置也带来了强悍的自拍效果，X9s拥有前置背景虚化、自动HDR、自动柔光灯等功能。实测结果也证明了vivo
-    X9s 的自拍人物背景虚化自然，美颜算法的确能把人拍的更美而不失真实美感。在自拍方面vivo X9s
-    无疑能给你带来惊喜，而后置相机表现同样也可圈可点，白天解析力充足，曝光准确，夜晚噪点控制出色，细节丰富。
-    vivo
-    X9s的外观给我留下了良好的印象，超窄边框和U型天线带来了更好的一体感，细腻的金属喷砂和大弧度的R角带来很好的握持手感。强悍的配置也带来了强悍的自拍效果，X9s拥有前置背景虚化、自动HDR、自动柔光灯等功能。实测结果也证明了vivo
-    X9s 的自拍人物背景虚化自然，美颜算法的确能把人拍的更美而不失真实美感。在自拍方面vivo X9s
-</div>
+<body>
+    <div class="loader"></div>
 </body>
+
 </html>
