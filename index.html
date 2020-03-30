@@ -1,69 +1,28 @@
 <!DOCTYPE html>
-<html lang="cn">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style type="text/css">
-    .loader {
-        width: 50px;
-        height: 50px;
-        display: inline-block;
-        padding: 0px;
-        opacity: 0.5;
-        border: 3px solid #09acfd;
-        -webkit-animation: loader 1s ease-in-out infinite alternate;
-        animation: loader 1s ease-in-out infinite alternate;
-    }
-
-    .loader:before {
-        content: " ";
-        position: absolute;
-        z-index: -1;
-        top: 5px;
-        left: 5px;
-        right: 5px;
-        bottom: 5px;
-        border: 3px solid #09acfd;
-    }
-
-    .loader:after {
-        content: " ";
-        position: absolute;
-        z-index: -1;
-        top: 15px;
-        left: 15px;
-        right: 15px;
-        bottom: 15px;
-        border: 3px solid #09acfd;
-    }
-
-    @keyframes loader {
-        from {
-            transform: rotate(0deg) scale(1, 1);
-            border-radius: 0px;
-        }
-        to {
-            transform: rotate(360deg) scale(0, 0);
-            border-radius: 50px;
-        }
-    }
-
-    @-webkit-keyframes loader {
-        from {
-            -webkit-transform: rotate(0deg) scale(1, 1);
-            border-radius: 0px;
-        }
-        to {
-            -webkit-transform: rotate(360deg) scale(0, 0);
-            border-radius: 50px;
-        }
-    }
-    </style>
 </head>
-
 <body>
-    <div class="loader"></div>
+    <input id="share_button" type="button" value="share to facebook" />
+    <script type="text/JavaScript">
+        function popupwindow(url, title, w, h) {
+            wLeft = window.screenLeft ? window.screenLeft : window.screenX;
+            wTop = window.screenTop ? window.screenTop : window.screenY;
+ 
+            var left = wLeft + (window.innerWidth / 2) - (w / 2);
+            var top = wTop + (window.innerHeight / 2) - (h / 2);
+            return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+        }
+        window.onload = function () {
+            document.getElementById('share_button').onclick = function(){
+                var shareUrl = "http://www.facebook.com/sharer/sharer.php?u=https://www.google.com";
+                popupwindow(shareUrl, 'Facebook', 600, 400);
+            }
+        }
+    </script>
 </body>
-
 </html>
