@@ -19,7 +19,16 @@
         }
         window.onload = function () {
             document.getElementById('share_button').onclick = function(){
-                var shareUrl = "http://www.facebook.com/sharer/sharer.php?u=https://www.google.com";
+//                 var shareUrl = "http://www.facebook.com/sharer/sharer.php?u=https://www.google.com";
+               navigator.share({
+        title: document.title,
+        text: 'Hello World',
+        url: 'https://www.baidu.com.com',
+    })
+    .then(() => {
+        console.log('Share completed successfuly')
+    })
+    .catch((error) => { console.log(`share failed: ${error}`) });
                 popupwindow(shareUrl, 'Facebook', 600, 400);
             }
         }
